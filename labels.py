@@ -21,7 +21,7 @@ with open('Label.txt', 'w') as f:
         # Open the JSON and edit key-value pairs
             # each templist is for one image
             # each tempdict is for one label/row in the image
-        names_key = {'text': 'transcription', 'box': 'points'}
+            #to change key names from {'text': 'transcription', 'box': 'points'}
         with open(i, "r") as g:
             data = json.load(g)
             templist = []
