@@ -10,7 +10,7 @@ os.chdir(sys.path[0])
 endings = ['.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif']
 
 # if labels.txt file doesnt exist create it, otherwise open it
-with open('labels.txt', 'w') as f:
+with open('Label.txt', 'w') as f:
     # iterates JSON files 
     for i in glob.glob('*.json'):
         # Retrieve 'image_Name'
