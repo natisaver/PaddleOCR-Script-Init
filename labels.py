@@ -11,14 +11,16 @@ endings = ['.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif']
 
 # if labels.txt file doesnt exist create it, otherwise open it
 with open('Label.txt', 'w') as f:
-    # iterates JSON files 
+    # iterate through each JSON file in directory
     for i in glob.glob('*.json'):
-        # Retrieve 'image_Name'
+        # Retrieve full 'image_Name' and extension
         file_Name = os.path.splitext(i)[0]
         for ends in endings:
             if glob.glob(file_Name+ends):
                 image_Name = file_Name + ends
-        # Open the JSON and edit key-value
+        # Open the JSON and edit key-value pairs
+            # each templist is for one image
+            # each tempdict is for one label/row in the image
         names_key = {'text': 'transcription', 'box': 'points'}
         with open(i, "r") as g:
             data = json.load(g)
