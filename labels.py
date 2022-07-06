@@ -25,14 +25,12 @@ with open('Label.txt', 'w') as f:
         with open(i, "r") as g:
             data = json.load(g)
             templist = []
-            tempdict = {'transcription': '', 'points': '', 'difficult': False}
+            
             for row in data:
-                for old_name in row:
-                    if old_name == 'text':
-                        tempdict['transcription'] = row[old_name]
-                    elif old_name == 'box':
-                        x1, y1, x2, y2 = row[old_name]
-                        tempdict['points'] = [[x1, y1], [x1, y2], [x2, y2], [x2, y1]]
+                tempdict = {'transcription': '', 'points': '', 'difficult': False}
+                tempdict['transcription'] = row['text']
+                x1, y1, x2, y2 = row['box']
+                tempdict['points'] = [[x1, y1], [x1, y2], [x2, y2], [x2, y1]]
                 templist.append(tempdict)
         # print(templist)
         # Convert the list to a JSON object and write to text file
