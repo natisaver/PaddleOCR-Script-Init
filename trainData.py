@@ -46,17 +46,17 @@ for ends in endings:
                     data = json.load(g)
                 if random.random() < 0.3:
                     for idx, row in enumerate(data):
-                    #     im = Image.open(i)
-                    #     cropped = im.crop(row['box'])
-                    #     cropped.save(f"{create_valid_path}/{file_name}_{idx}{ends}")
+                        im = Image.open(i)
+                        cropped = im.crop(row['box'])
+                        cropped.save(f"{create_valid_path}/{file_name}_{idx}{ends}")
                         f2.write(f"{create_valid_path}/{file_name}_{idx}{ends}" + '\t' + row['text']+'\n')
                 
                 # training set
                 else:
                     for idx, row in enumerate(data):
-                        # im = Image.open(i)
-                        # cropped = im.crop(row['box'])
-                        # cropped.save(f"{create_train_path}/{file_name}_{idx}{ends}")
+                        im = Image.open(i)
+                        cropped = im.crop(row['box'])
+                        cropped.save(f"{create_train_path}/{file_name}_{idx}{ends}")
                         f1.write(f"{create_valid_path}/{file_name}_{idx}{ends}" + '\t' + row['text']+'\n')
 
 
