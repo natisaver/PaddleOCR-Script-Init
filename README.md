@@ -9,8 +9,9 @@ initialisation script for paddleocr model
   - This script must be run before `C:\Users\username\xtract\tests\evaluation_tests\ocr_model_evaluation\test_ocr_model_evaluation.py` is runned.
 
 ### What is the script `labels.py`?
-- This script is necessary for generating a Label.txt file that summarises all the json information of all the bounding boxes contained within an image, with its textual information etc.
-- The Label.txt file is used when we run the PaddleOCR Model for generating evaluation metrics of our model on the groundtruth data
+- This script generates a summary of groundtruth information on each image, when we are doing end-to-end evaluation.
+- This script generates a Label.txt file which is then used when we run the PaddleOCR Model for generating evaluation metrics of our model on the groundtruth data
+- The Label.txt summarises all the json information of all the bounding boxes contained within an image, with its textual information, coordinates of box etc.
 
 ### What is the script `trainData.py`?
 - This script is used when we are trying to train an inference model.
