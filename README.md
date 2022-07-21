@@ -20,3 +20,11 @@ initialisation script for paddleocr model
 - The respect .txt files are also updated with the new cropped image name and textual information.
   - The path of these generated folders must be configured at `C:\Users\username\xtract\project\config\en_PP-OCRv3_rec.yml`.
   - This script must be run before `C:\Users\username\xtract\train.sh` is runned.
+
+### What is the script `copyimagetextract.bat`?
+- This script shifts files according to a list of files in a designated .txt file:
+```text
+image_000.jpg
+image_001.jpg
+```
+- You have to indicate the source of the text file, followed by the from and to directories.
