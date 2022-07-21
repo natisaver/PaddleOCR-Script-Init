@@ -22,7 +22,7 @@ initialisation script for paddleocr model
   - This script must be run before `C:\Users\username\xtract\train.sh` is runned.
 
 ### What is the script `copyimagetextract.bat`?
-- This script shifts files according to a list of files in a designated .txt file:
+- This script shifts files according to the file names listed in a designated .txt file:
 ```text
 image_000.jpg
 image_001.jpg
